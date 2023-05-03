@@ -11,18 +11,18 @@ Redundancy is an essential part of network design. As modern networks are expect
 The following is an example of a poorly designed network
 
 
-![Point of failure example](https://github.com/Catcurity123/TNE10006/blob/main/Picture/Point_Of_Failure.png?raw=true)
+![Point of failure example](https://github.com/Catcurity123/Swinburne-ICT-Courses/blob/main/TNE10006%20-%20Network%20and%20Switching/Picture/Point_Of_Failure.png?raw=true)
 
 
 The following is an example of a much better designed network
 
-![Good network](https://github.com/Catcurity123/TNE10006/blob/main/Picture/Good_Network.png?raw=true)
+![Good network](https://github.com/Catcurity123/Swinburne-ICT-Courses/blob/main/TNE10006%20-%20Network%20and%20Switching/Picture/Good_Network.png?raw=true)
 
 
 > However, without STP, there is a problem that can destroy our redundant network.
 
 ### **Broadcast Storm**
-![broadcast storm](https://github.com/Catcurity123/TNE10006/blob/main/Picture/Broadcast_Storm.png?raw=true)
+![broadcast storm](https://github.com/Catcurity123/Swinburne-ICT-Courses/blob/main/TNE10006%20-%20Network%20and%20Switching/Picture/Broadcast_Storm.png?raw=true)
 
 
 The Ethernet Frame has a TTL field to prevent infinite loops, however, Layer 2 does not have such a field. Therefore, these broadcast storm or the broadcast frames that loops indefinitely around the network will cause our network to be congested and eventually 'destroyed'.
@@ -41,12 +41,12 @@ Therefore by selecting which ports are **forwarding** or **blocking** STp create
 - Switches use one field in the STP BPDU, the **Bridge ID** to elect a root bridge for the network. **The switch with the lowest Bridge ID will win**, however, if the bridge priority is equal (it is set to 32768 by default), it will use the **MAC address as a tie-breaker**.
 
 
-![Bridge ID](https://github.com/Catcurity123/TNE10006/blob/main/Picture/Bridge_ID.png?raw=true)
+![Bridge ID](https://github.com/Catcurity123/Swinburne-ICT-Courses/blob/main/TNE10006%20-%20Network%20and%20Switching/Picture/Bridge_ID.png?raw=true)
 
 
 - Cisco switches use a version of STP called PVST(Per-VLAN SPanning Tree). Therefore, there is a VLAN ID in the Bridge ID to enable different VLAN instances to forwarding or blocking state.
 
-![Bridge Priority and Extended System ID](https://github.com/Catcurity123/TNE10006/blob/main/Picture/Bridge_ID2.png?raw=true)
+![Bridge Priority and Extended System ID](https://github.com/Catcurity123/Swinburne-ICT-Courses/blob/main/TNE10006%20-%20Network%20and%20Switching/Picture/Bridge_ID2.png?raw=true)
 
 As the **Bridge priority + Extended system ID** is a single field of the bridge ID and the extended system ID is set(by the VLAN ID) hence can not be changed, we can only change the STP bridge priory in units of 4096. That is:
 
@@ -72,7 +72,7 @@ Root cost is calculated based on the following:
 1 Gbps => 4 STP cost (Gigabit)
 10 Gbps => 2 STP cost
 ```
-![Switch logic of choosing root port](https://github.com/Catcurity123/TNE10006/blob/main/Picture/Logic.png?raw=true)
+![Switch logic of choosing root port](https://github.com/Catcurity123/Swinburne-ICT-Courses/blob/main/TNE10006%20-%20Network%20and%20Switching/Picture/Logic.png?raw=true)
 
 The root port is selected based on 3 criteria:
 - Lowest root cost.
@@ -87,16 +87,16 @@ The root port is selected based on 3 criteria:
 - The other switch will make its port non-designated (blocking).
 
 ### Examples
-![STP_Example](https://github.com/Catcurity123/TNE10006/blob/main/Picture/Ex1.png?raw=true)
+![STP_Example](https://github.com/Catcurity123/Swinburne-ICT-Courses/blob/main/TNE10006%20-%20Network%20and%20Switching/Picture/Ex1.png?raw=true)
 
-![Example_answer](https://github.com/Catcurity123/TNE10006/blob/main/Picture/Ex1_Answer.png?raw=true)
+![Example_answer](https://github.com/Catcurity123/Swinburne-ICT-Courses/blob/main/TNE10006%20-%20Network%20and%20Switching/Picture/Ex1_Answer.png?raw=true)
 
 
 ### Spanning Tree Port States
 
 There are 4 states of STP port and 2 attributes for those states:
 
-![STP state](https://github.com/Catcurity123/TNE10006/blob/main/Picture/STP/STPState.png?raw=true)
+![STP state](https://github.com/Catcurity123/Swinburne-ICT-Courses/blob/main/TNE10006%20-%20Network%20and%20Switching/Picture/STP/STPState.png?raw=true)
 
 - **Root/Designated** ports remain **stable** in **Forwarding** state.
 - **Non-designated** ports remain stable in a **Blocking** state.
@@ -130,11 +130,11 @@ Let's talk more about STP Port State:
   * A port in the Forwarding state sends/receives normal traffic.
   * A port in the Forwarding state learns MAC address.
 
-![STP port summary](https://github.com/Catcurity123/TNE10006/blob/main/Picture/STP/SummaryPortState.png?raw=true)
+![STP port summary](https://github.com/Catcurity123/Swinburne-ICT-Courses/blob/main/TNE10006%20-%20Network%20and%20Switching/Picture/STP/SummaryPortState.png?raw=true)
 
 ### Spanning Tree Timers
 
-![Spanning Tree Timer](https://github.com/Catcurity123/TNE10006/blob/main/Picture/STP/SpanningTreeTimer.png?raw=true)
+![Spanning Tree Timer](https://github.com/Catcurity123/Swinburne-ICT-Courses/blob/main/TNE10006%20-%20Network%20and%20Switching/Picture/STP/SpanningTreeTimer.png?raw=true)
 
 * Therefore, STP Max Age Timer is crucial for detecting error in network topology and issues appropriate measures to fix the error.
 
@@ -148,7 +148,7 @@ Let's talk more about STP Port State:
 ### **PORTFAST**
 It is noteworthy that only interfaces connected to another switch can form a Layer 2 loop, therefore, there is no point in transitioning from blocking to listening to learning for interface that is connected to **end-user**.
 
-![Interface connected to end-user](https://github.com/Catcurity123/TNE10006/blob/main/Picture/STP/PortFast.png?raw=true)
+![Interface connected to end-user](https://github.com/Catcurity123/Swinburne-ICT-Courses/blob/main/TNE10006%20-%20Network%20and%20Switching/Picture/STP/PortFast.png?raw=true)
 
 * Portfast allows a port to move immediately to the **Forwading** state, bypassing **Listening and Learning**.
 
@@ -159,19 +159,19 @@ It is noteworthy that only interfaces connected to another switch can form a Lay
 ### **STP Load-Balancing**
 Different VLANs may have different STP topology for load-balancing, suppose we have the following example:
 
-![Vlan1](https://github.com/Catcurity123/TNE10006/blob/main/Picture/STP/Vlan1.png?raw=true)
+![Vlan1](https://github.com/Catcurity123/Swinburne-ICT-Courses/blob/main/TNE10006%20-%20Network%20and%20Switching/Picture/STP/Vlan1.png?raw=true)
 
-![Vlan2](https://github.com/Catcurity123/TNE10006/blob/main/Picture/STP/Vlan2.png?raw=true)
+![Vlan2](https://github.com/Catcurity123/Swinburne-ICT-Courses/blob/main/TNE10006%20-%20Network%20and%20Switching/Picture/STP/Vlan2.png?raw=true)
 
 If we have multiple VLANs in our network, blocking the same interface in each VLAN is a waste of interface bandwith, that interface will be doing nothing, just waiting for another connection  to fail so it can start forwarding.
 
 However, if we configure different root bridge for different VLANs, different VLANs will disable different interfaces making the best use of its bandwith. Another example as follows:
 
-![STP load-balancing Ex](https://github.com/Catcurity123/TNE10006/blob/main/Picture/STP/Ex.png?raw=true)
+![STP load-balancing Ex](https://github.com/Catcurity123/Swinburne-ICT-Courses/blob/main/TNE10006%20-%20Network%20and%20Switching/Picture/STP/Ex.png?raw=true)
 
 
-![STP load-balancing Ex2](https://github.com/Catcurity123/TNE10006/blob/main/Picture/STP/Vlan10.png?raw=true)
+![STP load-balancing Ex2](https://github.com/Catcurity123/Swinburne-ICT-Courses/blob/main/TNE10006%20-%20Network%20and%20Switching/Picture/STP/Vlan10.png?raw=true)
 
 
 
-![STP load-balancing Ex3](https://github.com/Catcurity123/TNE10006/blob/main/Picture/STP/vlan20.png?raw=true)
+![STP load-balancing Ex3](https://github.com/Catcurity123/Swinburne-ICT-Courses/blob/main/TNE10006%20-%20Network%20and%20Switching/Picture/STP/vlan20.png?raw=true)

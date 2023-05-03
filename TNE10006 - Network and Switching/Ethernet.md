@@ -8,7 +8,7 @@ Ethernet is a family of networking technologies that are widely used in **local 
 
 
 ## Ethernet Frame
-![Ethernet Frame Illustration](https://github.com/Catcurity123/TNE10006/blob/main/Picture/Ethernet/EthernetFrame.png?raw=true)
+![Ethernet Frame Illustration](https://github.com/Catcurity123/Swinburne-ICT-Courses/blob/main/TNE10006%20-%20Network%20and%20Switching/Picture/Ethernet/EthernetFrame.png?raw=true)
 
 1. **Preamble:** 7 bytes of alternating 1's and 0's, which aalows devices to synchronize with their receiver clocks.
 

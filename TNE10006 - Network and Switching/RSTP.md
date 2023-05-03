@@ -2,7 +2,7 @@
 ## Description
 There have been several versions of STP released over the years to improve convergence times and add features.
 
-![STP versions](https://github.com/Catcurity123/TNE10006/blob/main/Picture/RSTP/ListSpanningTree.png?raw=true)
+![STP versions](https://github.com/Catcurity123/Swinburne-ICT-Courses/blob/main/TNE10006%20-%20Network%20and%20Switching/Picture/RSTP/ListSpanningTree.png?raw=true)
 
 
 ## Rapid Spanning Tree Protocol
@@ -16,20 +16,20 @@ The **similarities of RSTP and STP** are as follows:
 
 **Port cost**, however, is different as follows:
 
-![RSTP port state](https://github.com/Catcurity123/TNE10006/blob/main/Picture/RSTP/SpanningTreeCost.png?raw=true)
+![RSTP port state](https://github.com/Catcurity123/Swinburne-ICT-Courses/blob/main/TNE10006%20-%20Network%20and%20Switching/Picture/RSTP/SpanningTreeCost.png?raw=true)
 
 **RSTP port states** also simplify the port state of STP.
 
-![RSTP port state](https://github.com/Catcurity123/TNE10006/blob/main/Picture/RSTP/RSTPPortState.png?raw=true)
+![RSTP port state](https://github.com/Catcurity123/Swinburne-ICT-Courses/blob/main/TNE10006%20-%20Network%20and%20Switching/Picture/RSTP/RSTPPortState.png?raw=true)
 
 **The root port** and **designated port** remain unchanged in RSTP, **non-designated** port however is divided into two roles:
 - **Althernative port** role is the port that will be blocked and receive BPDU from superior switch
 
-![alternative](https://github.com/Catcurity123/TNE10006/blob/main/Picture/RSTP/Alternative.png?raw=true)
+![alternative](https://github.com/Catcurity123/Swinburne-ICT-Courses/blob/main/TNE10006%20-%20Network%20and%20Switching/Picture/RSTP/Alternative.png?raw=true)
 
 - **back up port** role **only exsist if a Switch is connected to a hub** (which is not so common in modern network), it will function as a back up for the **designated port**.
 
-![backup](https://github.com/Catcurity123/TNE10006/blob/main/Picture/RSTP/Backup.png?raw=true)
+![backup](https://github.com/Catcurity123/Swinburne-ICT-Courses/blob/main/TNE10006%20-%20Network%20and%20Switching/Picture/RSTP/Backup.png?raw=true)
 
 Unlike STP which will only allow root bridge to send BPDUs, RSTP send their own BPDUs every hello time (2 seconds), Switch age in RSP also faster with just 3 misses (6 seconds), if after 6 seconds the port will flush all MAC address learned on that interface, assuming that the interface is down.
 
@@ -40,4 +40,4 @@ Unlike STP which will only allow root bridge to send BPDUs, RSTP send their own 
 
 Example of identifying **port role** and **link type**
 
-![example](https://github.com/Catcurity123/TNE10006/blob/main/Picture/RSTP/Example.png?raw=true)
+![example](https://github.com/Catcurity123/Swinburne-ICT-Courses/blob/main/TNE10006%20-%20Network%20and%20Switching/Picture/RSTP/Example.png?raw=true)
